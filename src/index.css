@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.title-font {
+  @apply font-medium not-italic text-3xl text-gray-900 leading-10;
+}
+
+.subtitle-font {
+  @apply font-normal not-italic text-base text-gray-500 leading-6;
+}
+
+.logo-font {
+  @apply font-logo not-italic text-2xl leading-7;
+}
+
+.nav-header {
+  @apply font-normal not-italic text-base text-gray-900 leading-[19px] tracking-[0.06em] uppercase py-4;
+}
+
+.nav-link {
+  @apply font-medium not-italic text-base text-[#384853] leading-[19px] tracking-[0.06em];
+}
+
+.nav-item {
+  @apply flex items-center gap-1;
+}
