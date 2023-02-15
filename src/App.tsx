@@ -1,4 +1,4 @@
-import Dashboard from "./Dashboard";
+import Dashboard from "./pages/Dashboard";
 import Layout from "./Layout";
 import "./index.css";
 import { Routes, Route } from "react-router-dom";

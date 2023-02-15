@@ -16,7 +16,7 @@ import {
 
 export function Sidebar() {
   return (
-    <nav className="w-1/3">
+    <nav className="w-1/4 min-w-[235px]">
       <AuthSection />
       <h2 className="logo-font">ecomspaces</h2>
       <Navigation />
