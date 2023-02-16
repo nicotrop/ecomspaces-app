@@ -1,7 +1,41 @@
+import Chart from "../charts/Chart";
 import PeriodDropdown from "../components/PeriodDropdown";
 import { DownArrowIcon, ThreeDotsIcon, UpArrowIcon } from "../icons/NavIcons";
 
+const generateData = (): { date: string; volume: number }[] => {
+  const data: { date: string; monthDate: string; volume: number }[] = [];
+  const monthNames = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  for (let i = 0; i < 12; i++) {
+    const month = i + 1;
+    const year = 2022;
+    for (let j = 1; j <= 4; j++) {
+      const day = (j - 1) * 7 + 1; // data points every 7 days
+      const date = `${monthNames[i]} ${day}, ${year}`;
+      const monthDate = `${monthNames[i]}`;
+      const volume = Math.floor(Math.random() * 500) + 100;
+      data.push({ date, volume, monthDate });
+    }
+  }
+  return data;
+};
+
 export default function Dashboard() {
+  const data = generateData();
+  console.log(data);
+
   return (
     <section className="pl-4 w-3/4">
       <h1 className="title-font">Welcome back, Olivia 👋</h1>
@@ -10,6 +44,7 @@ export default function Dashboard() {
       </p>
       <PeriodDropdown />
       <DashboardStats />
+      <Chart data={data} />
     </section>
   );
 }
