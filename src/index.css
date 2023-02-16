@@ -22,6 +22,10 @@
   @apply font-medium not-italic text-3xl text-gray-900 leading-10;
 }
 
+.title2-font {
+  @apply font-medium not-italic text-2xl text-gray-900 leading-5;
+}
+
 .subtitle-font {
   @apply font-normal not-italic text-base text-gray-500 leading-6;
 }

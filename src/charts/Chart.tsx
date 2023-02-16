@@ -11,7 +11,7 @@ import {
 
 type DataPoint = {
   date: string;
-  volume: number;
+  shipments: number;
 };
 
 type Props = {
@@ -21,7 +21,7 @@ type Props = {
 const Chart: React.FC<Props> = ({ data }) => {
   return (
     <ResponsiveContainer width="100%" height={300}>
-      <AreaChart data={data} margin={{ bottom: 50, left: 20 }}>
+      <AreaChart data={data} margin={{ bottom: 30, left: 20 }}>
         <defs>
           <linearGradient id="color" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stopColor="#7F56D9" stopOpacity={0.8} />
@@ -30,7 +30,7 @@ const Chart: React.FC<Props> = ({ data }) => {
         </defs>
         <Area
           type="linear"
-          dataKey="volume"
+          dataKey="shipments"
           stroke="#7F56D9"
           strokeWidth={2}
           fillOpacity={1}
