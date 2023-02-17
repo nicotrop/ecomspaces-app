@@ -170,7 +170,6 @@ export const incomingPOData: POData = [
     expectedDate: "2023-03-21",
     trackingNumber: "18nnion918uob1988n",
   },
-  // add more data points
 ];
 
 export const onHoldOrdersData: OrderData = [
