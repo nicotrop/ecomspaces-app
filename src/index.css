@@ -62,3 +62,9 @@
   box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1),
     0px 1px 2px rgba(16, 24, 40, 0.06);
 }
+
+.rdt_TableHeadRow {
+  font-size: 14px;
+  line-height: 18px;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}

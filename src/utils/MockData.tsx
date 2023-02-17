@@ -266,3 +266,29 @@ export const mockTabs = [
     number: "43",
   },
 ];
+
+export const TextValue: {
+  buttonText: string;
+  value: string;
+}[] = [
+  {
+    buttonText: "Last 7 days",
+    value: "sevenDays",
+  },
+  {
+    buttonText: "Last 30 days",
+    value: "thirtyDays",
+  },
+  {
+    buttonText: "Last 3 months",
+    value: "threeMonths",
+  },
+  {
+    buttonText: "Last 6 months",
+    value: "sixMonths",
+  },
+  {
+    buttonText: "Last year",
+    value: "lastYear",
+  },
+];

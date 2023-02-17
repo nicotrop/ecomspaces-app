@@ -40,7 +40,7 @@ const TabContainer = ({
       <h2 className="title2-font">Quick Actions</h2>
       <p className="subtitle-font">Manage your orders</p>
       <div>
-        <ul className="flex gap-4">
+        <ul className="flex overflow-x-scroll gap-4 scrollbar-hide">
           {mockTabs.map((tab, i) => (
             <li key={i}>
               <Tab
@@ -72,15 +72,14 @@ const Tab = ({
   number: string;
 }) => {
   return (
-    <div
-      className={`${
-        activeTab === value &&
-        "bg-[#F9F5FF] border-b-2 border-solid border-[#6941C6]"
-      } hover:bg-[#F9F5FF] min-w-[100px] cursor-pointer ease-in-out duration-200 rounded-md py-3 px-3 flex justify-center gap-1`}
+    <button
+      value={value}
+      onClick={handleClick}
+      className={`${activeTab === value && "bg-[#F9F5FF]"} hover:bg-[#F9F5FF] ${
+        value !== "allOrders" && "min-w-[200px]"
+      } cursor-pointer ease-in-out duration-200 rounded-md py-3 px-5 flex justify-center gap-2`}
     >
       <button
-        value={value}
-        onClick={handleClick}
         className={`not-italic font-normal ${
           activeTab === value ? "text-[#6941C6]" : "text-gray-500"
         } h-full w-full leading-5 text-sm`}
@@ -89,7 +88,7 @@ const Tab = ({
       </button>
       {value !== "allOrders" && (
         <figure
-          className={`flex justify-center items-center rounded-md text-center text-xs px-2 py-1 ${
+          className={`flex justify-between items-center rounded-md text-center text-xs px-2 py-1 ${
             activeTab === value
               ? "bg-[#6941C6] text-white"
               : "text-[#6941C6] bg-[#f0ebf9]"
@@ -98,6 +97,6 @@ const Tab = ({
           <span>{number}</span>
         </figure>
       )}
-    </div>
+    </button>
   );
 };

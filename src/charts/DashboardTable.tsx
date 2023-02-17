@@ -39,9 +39,8 @@ export const DashboardTable = ({ tableData, isLoading }: OrdersTableProps) => {
         },
         headRow: {
           style: {
+            "font-size": "22px",
             fontSize: "22px",
-            fontColor: "#667085",
-            paddingRight: "8px",
           },
         },
       },

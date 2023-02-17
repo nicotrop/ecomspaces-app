@@ -16,10 +16,12 @@ import {
 
 export function Sidebar() {
   return (
-    <nav className="w-1/4 min-w-[235px]">
-      <AuthSection />
-      <h2 className="logo-font">ecomspaces</h2>
-      <Navigation />
+    <nav className="w-1/4 min-w-[235px] relative">
+      <div className="fixed">
+        <AuthSection />
+        <h2 className="logo-font">ecomspaces</h2>
+        <Navigation />
+      </div>
     </nav>
   );
 }

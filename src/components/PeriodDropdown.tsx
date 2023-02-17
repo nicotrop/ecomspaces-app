@@ -1,65 +1,18 @@
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
+import { CalendarIcon } from "../icons/NavIcons";
+import { TextValue } from "../utils/MockData";
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
-
-interface MenuItemProps {
-  handleClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
-  buttonText: string;
-  value: string;
-}
-
-const MenuItem = ({ handleClick, buttonText, value }: MenuItemProps) => (
-  <Menu.Item>
-    {({ active }) => (
-      <button
-        value={value}
-        className={classNames(
-          active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-          "block px-4 py-2 text-sm w-full text-left"
-        )}
-        onClick={handleClick}
-      >
-        {buttonText}
-      </button>
-    )}
-  </Menu.Item>
-);
 
 type PeriodDropdownObj = {
   buttonText: string;
   value: string;
 };
 
-const TextValue: {
-  buttonText: string;
-  value: string;
-}[] = [
-  {
-    buttonText: "Last 7 days",
-    value: "sevenDays",
-  },
-  {
-    buttonText: "Last 30 days",
-    value: "thirtyDays",
-  },
-  {
-    buttonText: "Last 3 months",
-    value: "threeMonths",
-  },
-  {
-    buttonText: "Last 6 months",
-    value: "sixMonths",
-  },
-  {
-    buttonText: "Last year",
-    value: "lastYear",
-  },
-];
-
-const PeriodDropdown = ({
+export const PeriodDropdown = ({
   timePeriod,
   setTimePeriod,
 }: {
@@ -79,8 +32,9 @@ const PeriodDropdown = ({
     <div className="w-full h-11 my-2 flex items-center justify-end">
       <Menu as="div" className="relative inline-block text-left float-right">
         <div>
-          <Menu.Button className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-offset-gray-100">
-            {timePeriod}
+          <Menu.Button className="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-offset-gray-100 gap-2">
+            <CalendarIcon />
+            <span>{timePeriod}</span>
           </Menu.Button>
         </div>
 
@@ -111,4 +65,25 @@ const PeriodDropdown = ({
   );
 };
 
-export default PeriodDropdown;
+interface MenuItemProps {
+  handleClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  buttonText: string;
+  value: string;
+}
+
+const MenuItem = ({ handleClick, buttonText, value }: MenuItemProps) => (
+  <Menu.Item>
+    {({ active }) => (
+      <button
+        value={value}
+        className={classNames(
+          active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+          "block px-4 py-2 text-sm w-full text-left"
+        )}
+        onClick={handleClick}
+      >
+        {buttonText}
+      </button>
+    )}
+  </Menu.Item>
+);

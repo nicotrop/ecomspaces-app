@@ -39,6 +39,7 @@ const Chart: React.FC<Props> = ({ data }) => {
         <XAxis xAxisId="0" dataKey="date" hide={true} />
         <XAxis
           xAxisId="1"
+          tick={{ fontSize: 12, color: "#667085" }}
           tickLine={false}
           dataKey="monthDate"
           interval="preserveStartEnd"
@@ -48,11 +49,13 @@ const Chart: React.FC<Props> = ({ data }) => {
             angle: 0,
             dy: 30,
             position: "center",
+            fontSize: 14,
+            color: "#667085",
           }}
         />
         <YAxis
           type="number"
-          tick={true}
+          tick={{ fontSize: 12, color: "#667085" }}
           tickLine={false}
           axisLine={false}
           domain={["auto", "auto"]}
@@ -61,6 +64,8 @@ const Chart: React.FC<Props> = ({ data }) => {
             angle: -90,
             dx: -30,
             position: "center",
+            fontSize: 14,
+            color: "#667085",
           }}
           name="Shipment Volume"
         />
