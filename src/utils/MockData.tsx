@@ -229,3 +229,41 @@ export const onHoldOrdersData: OrderData = [
     shippingMethod: "Air",
   },
 ];
+
+export function fetchMockData(activeTab: string) {
+  switch (activeTab) {
+    case "allOrders":
+      return Promise.resolve(allOrdersData);
+    case "dueTodayOrders":
+      return Promise.resolve(dueTodayOrdersData);
+    case "incomingPo":
+      return Promise.resolve(incomingPOData);
+    case "onHoldOrders":
+      return Promise.resolve(onHoldOrdersData);
+    default:
+      return Promise.resolve([]);
+  }
+}
+
+export const mockTabs = [
+  {
+    title: "All",
+    value: "allOrders",
+    number: "2",
+  },
+  {
+    title: "Orders due today",
+    value: "dueTodayOrders",
+    number: "20",
+  },
+  {
+    title: "Incoming POs",
+    value: "incomingPo",
+    number: "100",
+  },
+  {
+    title: "Orders on hold",
+    value: "onHoldOrders",
+    number: "43",
+  },
+];
