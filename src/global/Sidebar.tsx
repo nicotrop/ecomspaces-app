@@ -36,7 +36,7 @@ const Navigation = () => {
             <Link to="/">Dashboard</Link>
           </NavItem>
           <NavItem icon={<FileIcon />}>
-            <Link to="/">Invoices</Link>
+            <Link to="/invoices">Invoices</Link>
           </NavItem>
           <NavItem icon={<EstimatorIcon />}>
             <Link to="/">Estimator</Link>
@@ -78,7 +78,13 @@ const Navigation = () => {
   );
 };
 
-const NavItem = ({ icon, children }) => {
+const NavItem = ({
+  icon,
+  children,
+}: {
+  icon: React.ReactNode;
+  children: React.ReactNode;
+}) => {
   return (
     <li className="nav-item">
       {icon}

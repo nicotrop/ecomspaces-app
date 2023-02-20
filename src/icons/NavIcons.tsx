@@ -561,16 +561,16 @@ export function ArrowDown() {
       <path
         d="M12 5V19"
         stroke="#1A1919"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M19 12L12 19L5 12"
         stroke="#1A1919"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -588,9 +588,202 @@ export function CalendarIcon() {
       <path
         d="M12.3333 1.66675V5.00008M5.66667 1.66675V5.00008M1.5 8.33342H16.5M3.16667 3.33341H14.8333C15.7538 3.33341 16.5 4.07961 16.5 5.00008V16.6667C16.5 17.5872 15.7538 18.3334 14.8333 18.3334H3.16667C2.24619 18.3334 1.5 17.5872 1.5 16.6667V5.00008C1.5 4.07961 2.24619 3.33341 3.16667 3.33341Z"
         stroke="#344054"
-        stroke-width="1.67"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.67"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function InvoiceOverdueIcon() {
+  return (
+    <svg
+      width="48"
+      height="48"
+      viewBox="0 0 48 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="48" height="48" rx="24" fill="#F2F4F7" />
+      <path
+        d="M26 14H18C17.4696 14 16.9609 14.2107 16.5858 14.5858C16.2107 14.9609 16 15.4696 16 16V32C16 32.5304 16.2107 33.0391 16.5858 33.4142C16.9609 33.7893 17.4696 34 18 34H30C30.5304 34 31.0391 33.7893 31.4142 33.4142C31.7893 33.0391 32 32.5304 32 32V20M26 14L32 20M26 14V20H32M28 25H20M28 29H20M22 21H20"
+        stroke="#475467"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function InvoicePaidIcon() {
+  return (
+    <svg
+      width="48"
+      height="48"
+      viewBox="0 0 48 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="48" height="48" rx="24" fill="#F2F4F7" />
+      <path
+        d="M13 22H35M15 16H33C34.1046 16 35 16.8954 35 18V30C35 31.1046 34.1046 32 33 32H15C13.8954 32 13 31.1046 13 30V18C13 16.8954 13.8954 16 15 16Z"
+        stroke="#475467"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function InvoiceLateIcon() {
+  return (
+    <svg
+      width="49"
+      height="48"
+      viewBox="0 0 49 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect x="0.5" width="48" height="48" rx="24" fill="#F2F4F7" />
+      <g clipPath="url(#clip0_370_9373)">
+        <path
+          d="M29.5 33V31C29.5 29.9391 29.0786 28.9217 28.3284 28.1716C27.5783 27.4214 26.5609 27 25.5 27H17.5C16.4391 27 15.4217 27.4214 14.6716 28.1716C13.9214 28.9217 13.5 29.9391 13.5 31V33M35.5 33V31C35.4993 30.1137 35.2044 29.2528 34.6614 28.5523C34.1184 27.8519 33.3581 27.3516 32.5 27.13M28.5 15.13C29.3604 15.3503 30.123 15.8507 30.6676 16.5523C31.2122 17.2539 31.5078 18.1168 31.5078 19.005C31.5078 19.8932 31.2122 20.7561 30.6676 21.4577C30.123 22.1593 29.3604 22.6597 28.5 22.88M25.5 19C25.5 21.2091 23.7091 23 21.5 23C19.2909 23 17.5 21.2091 17.5 19C17.5 16.7909 19.2909 15 21.5 15C23.7091 15 25.5 16.7909 25.5 19Z"
+          stroke="#475467"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_370_9373">
+          <rect
+            width="24"
+            height="24"
+            fill="white"
+            transform="translate(12.5 12)"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+}
+
+export function InvoiceDueIcon() {
+  return (
+    <svg
+      width="49"
+      height="48"
+      viewBox="0 0 49 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect x="0.5" width="48" height="48" rx="24" fill="#F2F4F7" />
+      <path
+        d="M26.6755 16.2222C26.6766 14.9945 24.1731 14 21.0883 14C18.0036 14 15.5022 14.9956 15.5 16.2222M15.5 16.2222C15.5 17.45 18.0013 18.4445 21.0883 18.4445C24.1753 18.4445 26.6766 17.45 26.6766 16.2222L26.6766 24.8445M15.5 16.2222V29.5556C15.5011 30.7834 18.0024 31.7779 21.0883 31.7779C22.5849 31.7779 23.9361 31.5412 24.9387 31.1601M15.5011 20.6667C15.5011 21.8945 18.0025 22.889 21.0894 22.889C24.1764 22.889 26.6778 21.8945 26.6778 20.6667M25.0057 26.6946C23.9976 27.0891 22.615 27.3335 21.0883 27.3335C18.0024 27.3335 15.5011 26.3391 15.5011 25.1113M33.0272 25.4646C34.9909 27.4169 34.9909 30.5836 33.0272 32.5358C31.0635 34.4881 27.8781 34.4881 25.9144 32.5358C23.9507 30.5836 23.9507 27.4169 25.9144 25.4646C27.8781 23.5124 31.0635 23.5124 33.0272 25.4646Z"
+        stroke="#475467"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function SeachIcon() {
+  return (
+    <svg
+      width="18"
+      height="18"
+      viewBox="0 0 18 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M16.5 16.5L12.875 12.875M14.8333 8.16667C14.8333 11.8486 11.8486 14.8333 8.16667 14.8333C4.48477 14.8333 1.5 11.8486 1.5 8.16667C1.5 4.48477 4.48477 1.5 8.16667 1.5C11.8486 1.5 14.8333 4.48477 14.8333 8.16667Z"
+        stroke="#667085"
+        strokeWidth="1.66667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function ChevronDown() {
+  return (
+    <svg
+      width="12"
+      height="8"
+      viewBox="0 0 12 8"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 1.5L6 6.5L11 1.5"
+        stroke="#667085"
+        strokeWidth="1.66667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function Dot({ status }: { status: "paid" | "due" | "late" | string }) {
+  let bgColor = "#12B76A";
+  if (status === "paid") bgColor = "#027A48";
+  if (status === "due") bgColor = "#B54708";
+  if (status === "late") bgColor = "#B42318";
+  return (
+    <svg
+      width="6"
+      height="6"
+      viewBox="0 0 6 6"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="3" cy="3" r="3" fill={bgColor} />
+    </svg>
+  );
+}
+
+export function CoinIcon({ color }: { color: string }) {
+  return (
+    <svg
+      width="15"
+      height="14"
+      viewBox="0 0 15 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5.88876 2.09876C7.68663 0.300065 10.6025 0.300759 12.4011 2.09876C14.1996 3.89677 14.1996 6.81288 12.4011 8.61158M10.4609 8.64422C10.4609 11.1879 8.39893 13.25 5.85543 13.25C3.31192 13.25 1.25 11.1879 1.25 8.64422C1.25 6.10052 3.31192 4.03844 5.85543 4.03844C8.39893 4.03844 10.4609 6.10052 10.4609 8.64422Z"
+        stroke={color}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function DownloadIcon() {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M13 9V11.6667C13 12.0203 12.8595 12.3594 12.6095 12.6095C12.3594 12.8595 12.0203 13 11.6667 13H2.33333C1.97971 13 1.64057 12.8595 1.39052 12.6095C1.14048 12.3594 1 12.0203 1 11.6667V9M3.66667 5.66667L7 9M7 9L10.3333 5.66667M7 9V1"
+        stroke="#7F56D9"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { DashboardStats } from "../components/DashboardStats";
-import PeriodDropdown from "../components/PeriodDropdown";
+import { PeriodDropdown } from "../components/TimeSelector";
 import { OrderData, POData, fetchMockData } from "../utils/MockData";
 import { DashboardTableWrapper } from "../components/DashboardTableWrapper";
 import { DashboardTimeSeries } from "../charts/DashboardTimeSeries";
+import { PageHeader, PageWrapper } from "../global/MainComponents";
 
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState("allOrders");
@@ -20,11 +21,11 @@ export default function Dashboard() {
   if (isLoading) return <div>Loading...</div>;
 
   return (
-    <section className="pl-4 w-3/4">
-      <h1 className="title-font">Welcome back, Olivia 👋</h1>
-      <p className="subtitle-font">
-        Track and manage your products and shipments
-      </p>
+    <PageWrapper>
+      <PageHeader
+        title="Welcome back, Olivia 👋"
+        subtitle=" Track and manage your products and shipments"
+      />
       <PeriodDropdown timePeriod={timePeriod} setTimePeriod={setTimePeriod} />
       <DashboardStats />
       <DashboardTimeSeries timePeriod={timePeriod} />
@@ -34,6 +35,6 @@ export default function Dashboard() {
         tableData={tableData}
         isLoading={isLoading}
       />
-    </section>
+    </PageWrapper>
   );
 }

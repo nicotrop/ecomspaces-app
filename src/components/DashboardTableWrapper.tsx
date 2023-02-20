@@ -40,7 +40,7 @@ const TabContainer = ({
       <h2 className="title2-font">Quick Actions</h2>
       <p className="subtitle-font">Manage your orders</p>
       <div>
-        <ul className="flex overflow-x-scroll gap-4 scrollbar-hide">
+        <ul className="flex overflow-y-visible overflow-x-scroll gap-4 scrollbar-hide py-2">
           {mockTabs.map((tab, i) => (
             <li key={i}>
               <Tab
@@ -77,18 +77,18 @@ const Tab = ({
       onClick={handleClick}
       className={`${activeTab === value && "bg-[#F9F5FF]"} hover:bg-[#F9F5FF] ${
         value !== "allOrders" && "min-w-[200px]"
-      } cursor-pointer ease-in-out duration-200 rounded-md py-3 px-5 flex justify-center gap-2`}
+      } cursor-pointer ease-in-out duration-200 hover:-translate-y-1 hover:scale-2 rounded-md py-3 px-5 flex justify-center gap-2`}
     >
-      <button
+      <span
         className={`not-italic font-normal ${
           activeTab === value ? "text-[#6941C6]" : "text-gray-500"
         } h-full w-full leading-5 text-sm`}
       >
         {title}
-      </button>
+      </span>
       {value !== "allOrders" && (
         <figure
-          className={`flex justify-between items-center rounded-md text-center text-xs px-2 py-1 ${
+          className={`flex justify-between items-center rounded-md text-center text-xs px-2 py-1 ease-in-out duration-200 ${
             activeTab === value
               ? "bg-[#6941C6] text-white"
               : "text-[#6941C6] bg-[#f0ebf9]"

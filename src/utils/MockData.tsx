@@ -292,3 +292,83 @@ export const TextValue: {
     value: "lastYear",
   },
 ];
+
+export const MockDashboardStats: {
+  title: string;
+  number: number;
+  percent: number;
+}[] = [
+  {
+    title: "Shipments",
+    number: 100,
+    percent: 10,
+  },
+  {
+    title: "Shipments On Time",
+    number: 10,
+    percent: 85,
+  },
+  {
+    title: "Returns",
+    number: 27,
+    percent: -25,
+  },
+  {
+    title: "Purchase Orders",
+    number: 22,
+    percent: 7,
+  },
+];
+
+export type InvoiceData = {
+  id: number;
+  alias: string;
+  name: string;
+  value: number;
+  dollarValue?: boolean;
+}[];
+
+export const mockInvoiceData: InvoiceData = [
+  {
+    id: 1,
+    alias: "amountDue",
+    name: "Amount Due",
+    value: 3450,
+    dollarValue: true,
+  },
+  {
+    id: 2,
+    alias: "totalPaid",
+    name: "Total Paid",
+    value: 10450,
+    dollarValue: true,
+  },
+  {
+    id: 3,
+    alias: "amountOverdue",
+    name: "Amount Overdue",
+    value: 450,
+    dollarValue: true,
+  },
+  {
+    id: 4,
+    alias: "invoicesLate",
+    name: "Invoices Late",
+    value: 2,
+  },
+];
+
+export const invoiceStatus = [
+  {
+    name: "Paid",
+    value: "paid",
+  },
+  {
+    name: "Due",
+    value: "due",
+  },
+  {
+    name: "Late",
+    value: "late",
+  },
+];
