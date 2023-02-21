@@ -17,7 +17,7 @@ const mockInvoiceTabData = [
     amount: 150.0,
     invoicePDF:
       "https://res.cloudinary.com/dygjptmlc/image/upload/v1676930997/PPT-152859_vtwcvj.pdf",
-    paymentLink: "nicotroplent.com",
+    paymentLink: "www.nicotroplent.com",
   },
   {
     status: "due",
@@ -26,8 +26,8 @@ const mockInvoiceTabData = [
     dueDate: "2021-02-31",
     amount: 90.0,
     invoicePDF:
-      "https://res.cloudinary.com/dygjptmlc/image/upload/v1676930997/PPT-152859_vtwcvj.pdf",
-    paymentLink: "nicotroplent.com",
+      "https://res.cloudinary.com/dygjptmlc/image/upload/v1676932518/WAL-152845_nevua1.pdf",
+    paymentLink: "https://nicotroplent.com",
   },
   {
     status: "late",
@@ -37,7 +37,7 @@ const mockInvoiceTabData = [
     amount: 50.0,
     invoicePDF:
       "https://res.cloudinary.com/dygjptmlc/image/upload/v1676930997/PPT-152859_vtwcvj.pdf",
-    paymentLink: "nicotroplent.com",
+    paymentLink: "https://nicotroplent.com",
   },
   {
     status: "due",
@@ -47,7 +47,7 @@ const mockInvoiceTabData = [
     amount: 75.0,
     invoicePDF:
       "https://res.cloudinary.com/dygjptmlc/image/upload/v1676930997/PPT-152859_vtwcvj.pdf",
-    paymentLink: "nicotroplent.com",
+    paymentLink: "https://nicotroplent.com",
   },
 ];
 
@@ -106,7 +106,13 @@ export const Invoices = () => {
                   />
                 </div>
                 <button className="flex items-center text-sm justify-center pay-now-shadow gap-1 py-2 px-4 h-9 bg-[#7F56D9] border-solid border-[#7F56D9] rounded-lg">
-                  <span className="text-white">Pay now</span>
+                  <a
+                    className="text-white"
+                    href={invoice.paymentLink}
+                    target="_blank"
+                  >
+                    Pay now
+                  </a>
                   <CoinIcon color="#FFFFFF" />
                 </button>
               </div>
@@ -114,7 +120,7 @@ export const Invoices = () => {
           </div>
           <div className="bg-[#F8F8F8] h-[550px]">
             <embed
-              src={`${invoice.invoicePDF}#toolbar=0&navpanes=0&scrollbar=0&zoom=100`}
+              src={`${invoice.invoicePDF}#toolbar=0`}
               type="application/pdf"
               width="100%"
               height="600px"
@@ -147,7 +153,7 @@ const InvoiceStatus = ({
         };
       case "late":
         return {
-          text: `Late by ${dueDate}`,
+          text: `Late`,
           cssClass: "warning",
         };
       default:
@@ -168,20 +174,22 @@ const InvoiceStatus = ({
   );
 };
 
+type InvoiceDataType = {
+  status: "paid" | "due" | "late" | string;
+  invoiceName: string;
+  invoiceDate: string;
+  dueDate: string;
+  amount: number;
+  invoicePDF: string;
+  paymentLink: string;
+};
+
 const InvoiceSelector = ({
   data,
   setInvoice,
 }: {
-  data: {
-    status: "paid" | "due" | "late" | string;
-    invoiceName: string;
-    invoiceDate: string;
-    dueDate: string;
-    amount: number;
-    invoicePDF: string;
-    paymentLink: string;
-  };
-  setInvoice: () => void;
+  data: InvoiceDataType;
+  setInvoice: (data: InvoiceDataType) => void;
 }) => {
   return (
     <div
@@ -197,7 +205,13 @@ const InvoiceSelector = ({
         <span className="text-gray-500">{data.invoiceDate}</span>
         {data.status !== "paid" && (
           <button className="flex items-center gap-1">
-            <span className="text-[#7F56D9]">Pay now</span>
+            <a
+              className="text-[#7F56D9]"
+              href={data.paymentLink}
+              target="_blank"
+            >
+              Pay now
+            </a>
             <CoinIcon color={"#7F56D9"} />
           </button>
         )}
