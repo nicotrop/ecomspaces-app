@@ -372,3 +372,62 @@ export const invoiceStatus = [
     value: "late",
   },
 ];
+
+export const mockInvoiceTabData = [
+  {
+    status: "paid",
+    invoiceName: "PPT-152859",
+    invoiceDate: "2021-05-01",
+    dueDate: "2021-05-31",
+    amount: 150.0,
+    invoicePDF:
+      "https://res.cloudinary.com/dygjptmlc/image/upload/v1676930997/PPT-152859_vtwcvj.pdf",
+    paymentLink: "www.nicotroplent.com",
+  },
+  {
+    status: "due",
+    invoiceName: "PPOY-8921",
+    invoiceDate: "2021-02-01",
+    dueDate: "2021-02-31",
+    amount: 90.0,
+    invoicePDF:
+      "https://res.cloudinary.com/dygjptmlc/image/upload/v1676932518/WAL-152845_nevua1.pdf",
+    paymentLink: "https://nicotroplent.com",
+  },
+  {
+    status: "late",
+    invoiceName: "SLC-2901",
+    invoiceDate: "2021-06-12",
+    dueDate: "2021-06-20",
+    amount: 50.0,
+    invoicePDF:
+      "https://res.cloudinary.com/dygjptmlc/image/upload/v1676930997/PPT-152859_vtwcvj.pdf",
+    paymentLink: "https://nicotroplent.com",
+  },
+  {
+    status: "due",
+    invoiceName: "AFWM-1029",
+    invoiceDate: "2021-03-01",
+    dueDate: "2021-03-15",
+    amount: 75.0,
+    invoicePDF:
+      "https://res.cloudinary.com/dygjptmlc/image/upload/v1676930997/PPT-152859_vtwcvj.pdf",
+    paymentLink: "https://nicotroplent.com",
+  },
+];
+
+type RadioTypes = {
+  id: string;
+  title: string;
+}[];
+
+export const AddressTypes: RadioTypes = [
+  { id: "residential", title: "Residential" },
+  { id: "business", title: "Business" },
+];
+
+export const ConfirmationTypes: RadioTypes = [
+  { id: "none", title: "None" },
+  { id: "delivery", title: "Delivery" },
+  { id: "signature", title: "Signature" },
+];

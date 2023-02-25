@@ -26,6 +26,10 @@
   @apply font-medium not-italic text-2xl text-gray-900 leading-5;
 }
 
+.title3-font {
+  @apply font-normal not-italic text-xl text-gray-900 leading-9;
+}
+
 .subtitle-font {
   @apply font-normal not-italic text-base text-gray-500 leading-6;
 }
@@ -75,4 +79,8 @@
 
 .pay-now-shadow {
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+.remove-outline {
+  outline: none;
 }

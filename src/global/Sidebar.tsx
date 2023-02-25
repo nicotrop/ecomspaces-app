@@ -39,7 +39,7 @@ const Navigation = () => {
             <Link to="/invoices">Invoices</Link>
           </NavItem>
           <NavItem icon={<EstimatorIcon />}>
-            <Link to="/">Estimator</Link>
+            <Link to="/estimator">Estimator</Link>
           </NavItem>
           <NavItem icon={<InventoryIcon />}>
             <Link to="/">Inventory</Link>
