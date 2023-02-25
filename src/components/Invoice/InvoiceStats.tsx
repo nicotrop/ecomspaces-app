@@ -1,11 +1,11 @@
-import { CardContainer, CardContentBox } from "../global/DataVizComponents";
 import {
   InvoiceDueIcon,
   InvoiceLateIcon,
   InvoiceOverdueIcon,
   InvoicePaidIcon,
   ThreeDotsIcon,
-} from "../icons/NavIcons";
+} from "../../icons/NavIcons";
+import { CardContainer, CardContentBox } from "../global/MainComponents";
 
 export const InvoiceStats = ({
   data,

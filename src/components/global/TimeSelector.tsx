@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import { CalendarIcon } from "../icons/NavIcons";
-import { TextValue } from "../utils/MockData";
+import { CalendarIcon } from "../../icons/NavIcons";
+import { TextValue } from "../../utils/MockData";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");

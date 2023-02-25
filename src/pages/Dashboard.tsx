@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { DashboardStats } from "../components/DashboardStats";
-import { PeriodDropdown } from "../components/TimeSelector";
+import { DashboardStats } from "../components/Dashboard/DashboardStats";
+import { PeriodDropdown } from "../components/global/TimeSelector";
 import { OrderData, POData, fetchMockData } from "../utils/MockData";
-import { DashboardTableWrapper } from "../components/DashboardTableWrapper";
+import { DashboardTableWrapper } from "../components/Dashboard/DashboardTableWrapper";
 import { DashboardTimeSeries } from "../charts/DashboardTimeSeries";
-import { PageHeader, PageWrapper } from "../global/MainComponents";
+import { PageHeader, PageWrapper } from "../components/global/MainComponents";
 
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState("allOrders");

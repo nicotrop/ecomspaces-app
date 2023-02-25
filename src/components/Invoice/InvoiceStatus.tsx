@@ -1,4 +1,4 @@
-import { Dot } from "../icons/NavIcons";
+import { Dot } from "../../icons/NavIcons";
 
 export const InvoiceStatus = ({
   status,

@@ -1,4 +1,4 @@
-import { SeachIcon } from "../icons/NavIcons";
+import { SeachIcon } from "../../icons/NavIcons";
 
 export default function SeachFilter({ className }: { className?: string }) {
   return (

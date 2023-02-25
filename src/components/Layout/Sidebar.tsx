@@ -12,7 +12,7 @@ import {
   ReturnIcon,
   ShipmentsIcon,
   WorkspaceIcon,
-} from "../icons/NavIcons";
+} from "../../icons/NavIcons";
 
 export function Sidebar() {
   return (

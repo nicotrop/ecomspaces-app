@@ -431,3 +431,32 @@ export const ConfirmationTypes: RadioTypes = [
   { id: "delivery", title: "Delivery" },
   { id: "signature", title: "Signature" },
 ];
+
+export const mockShippingRates = [
+  {
+    carrier: "UPS",
+    service: "UPS Next Day Air",
+    rate: 155.99,
+    deliveryDays: 1,
+  },
+  {
+    carrier: "UPS",
+    service: "UPS Ground",
+    rate: 5.99,
+    deliveryDays: 3,
+    cheapest: true,
+  },
+  {
+    carrier: "DHL",
+    service: "DHL Ground",
+    rate: 55.99,
+    deliveryDays: 3,
+  },
+
+  {
+    carrier: "FedEx",
+    service: "FedEx Ground",
+    rate: 5.99,
+    deliveryDays: 3,
+  },
+];

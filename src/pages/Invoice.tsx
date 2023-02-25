@@ -1,13 +1,16 @@
 import { useState } from "react";
-import { PageHeader, PageWrapper } from "../global/MainComponents";
-import { PeriodDropdown } from "../components/TimeSelector";
-import { CardWrapper } from "../global/DataVizComponents";
+import {
+  CardWrapper,
+  PageHeader,
+  PageWrapper,
+} from "../components/global/MainComponents";
+import { PeriodDropdown } from "../components/global/TimeSelector";
 import { mockInvoiceData, mockInvoiceTabData } from "../utils/MockData";
-import { InvoiceStats } from "../components/InvoiceStats";
-import { StatusFilter } from "../components/StatusFilter";
-import SeachFilter from "../components/SearchFilter";
-import { InvoiceSelector } from "../components/InvoiceSelector";
-import { InvoiceDisplay } from "../components/InvoiceDisplay";
+import { StatusFilter } from "../components/Dashboard/StatusFilter";
+import SeachFilter from "../components/Dashboard/SearchFilter";
+import { InvoiceSelector } from "../components/Invoice/InvoiceSelector";
+import { InvoiceDisplay } from "../components/Invoice/InvoiceDisplay";
+import { InvoiceStats } from "../components/Invoice/InvoiceStats";
 
 export type InvoiceDataType = {
   status: "paid" | "due" | "late" | string;

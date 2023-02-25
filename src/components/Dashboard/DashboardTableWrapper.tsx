@@ -1,5 +1,5 @@
-import { OrderData, POData, mockTabs } from "../utils/MockData";
-import { DashboardTable } from "../charts/DashboardTable";
+import { OrderData, POData, mockTabs } from "../../utils/MockData";
+import { DashboardTable } from "../../charts/DashboardTable";
 
 export const DashboardTableWrapper = ({
   activeTab,

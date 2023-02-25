@@ -1,5 +1,5 @@
 import React from "react";
-import { AddressTypes, ConfirmationTypes } from "../utils/MockData";
+import { AddressTypes, ConfirmationTypes } from "../../utils/MockData";
 
 export type DimensionsInputProps = {
   lengthRef: React.RefObject<HTMLInputElement>;
@@ -14,7 +14,7 @@ export type WeightInputProps = {
 
 export const ZipFromInput = React.forwardRef<HTMLInputElement>((props, ref) => {
   return (
-    <div className="w-[30%]">
+    <div className="w-32">
       <label
         htmlFor="zipFrom"
         className="block text-sm font-medium text-gray-700"
@@ -41,7 +41,7 @@ export const ZipFromInput = React.forwardRef<HTMLInputElement>((props, ref) => {
 
 export const ZipToInput = React.forwardRef<HTMLInputElement>((props, ref) => {
   return (
-    <div className="w-[30%]">
+    <div className="w-32">
       <label
         htmlFor="zipTo"
         className="block text-sm font-medium text-gray-700"
@@ -55,7 +55,7 @@ export const ZipToInput = React.forwardRef<HTMLInputElement>((props, ref) => {
           type="text"
           name="zipTo"
           id="zipTo"
-          className="w-full rounded-md border-gray-300 pr-12 shadow-sm sm:text-sm focus:border-none focus:outline-0 focus:ring-gray-300 focus:ring-1"
+          className="w-full rounded-md border-gray-300 shadow-sm sm:text-sm focus:border-none focus:outline-0 focus:ring-gray-300 focus:ring-1"
           placeholder="Zipcode"
           pattern="[0-9]{5}"
           required
@@ -71,7 +71,7 @@ export const AddressTypeInput = ({
   setAddressType: (value: string) => void;
 }) => {
   return (
-    <div className="w-[30%]">
+    <div className="w-[fit-content]">
       <label
         htmlFor="addressType"
         className="block text-sm font-medium text-gray-700"
@@ -111,7 +111,7 @@ export const ConfirmationInput = ({
   setConfirmation: (value: string) => void;
 }) => {
   return (
-    <div className="w-[30%]">
+    <div className="w-[fit-content]">
       <label
         htmlFor="confirmationType"
         className="block text-sm font-medium text-gray-700"
@@ -150,7 +150,8 @@ export const DimensionsInput = React.forwardRef<
   DimensionsInputProps
 >(({ lengthRef, widthRef, heightRef }, props) => {
   return (
-    <div className="w-[40%]">
+    // <div className="w-[40%] min-w-[220px]">
+    <div className="w-[fit-content]">
       <label htmlFor="dimensions" className="text-sm font-medium text-gray-700">
         <span>Dimensions </span>
         <span>(Inches)</span>
@@ -162,7 +163,7 @@ export const DimensionsInput = React.forwardRef<
           name="length"
           id="length"
           ref={lengthRef}
-          className="w-1/3 rounded-none border border-r-0 border-gray-300 rounded-l-md px-2 shadow-sm sm:text-sm focus:outline-0"
+          className="w-20 rounded-none border border-r-0 border-gray-300 rounded-l-md px-2 shadow-sm sm:text-sm focus:outline-0"
           placeholder="Length"
           required
         />
@@ -171,7 +172,7 @@ export const DimensionsInput = React.forwardRef<
           name="width"
           id="width"
           ref={widthRef}
-          className="w-1/3 rounded-none border border-gray-300  bg-transparent px-2 shadow-sm sm:text-sm focus:outline-0"
+          className="w-20 rounded-none border border-gray-300  bg-transparent px-2 shadow-sm sm:text-sm focus:outline-0"
           placeholder="Width"
           required
         />
@@ -180,7 +181,7 @@ export const DimensionsInput = React.forwardRef<
           name="height"
           id="height"
           ref={heightRef}
-          className="w-1/3 rounded-none border border-l-0 border-gray-300 rounded-r-md bg-transparent px-2 shadow-sm sm:text-sm focus:outline-0"
+          className="w-20 rounded-none border border-l-0 border-gray-300 rounded-r-md bg-transparent px-2 shadow-sm sm:text-sm focus:outline-0"
           placeholder="Height"
           required
         />
@@ -192,7 +193,7 @@ export const DimensionsInput = React.forwardRef<
 export const WeightInput = React.forwardRef<HTMLInputElement, WeightInputProps>(
   ({ weightLbsRef, weightOzRef }, props) => {
     return (
-      <div className="w-[40%]">
+      <div className="w-[145px]">
         <label htmlFor="weight" className="text-sm font-medium text-gray-700">
           <span>Weight </span>
         </label>
@@ -203,7 +204,7 @@ export const WeightInput = React.forwardRef<HTMLInputElement, WeightInputProps>(
             ref={weightLbsRef}
             name="pounds"
             id="pounds"
-            className="w-1/3 rounded-none border border-r-0 border-gray-300 rounded-l-md px-2 shadow-sm sm:text-sm focus:outline-0"
+            className="w-20 rounded-none border border-r-0 border-gray-300 rounded-l-md px-2 shadow-sm sm:text-sm focus:outline-0"
             placeholder="Pounds"
             required
           />
@@ -212,7 +213,7 @@ export const WeightInput = React.forwardRef<HTMLInputElement, WeightInputProps>(
             ref={weightOzRef}
             name="ounces"
             id="ounces"
-            className="w-1/3 rounded-none border border-gray-300  rounded-r-md px-2 shadow-sm sm:text-sm focus:outline-0"
+            className="w-20 rounded-none border border-gray-300  rounded-r-md px-2 shadow-sm sm:text-sm focus:outline-0"
             placeholder="Ounces"
             required
           />

@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import { invoiceStatus } from "../utils/MockData";
-import { ChevronDown } from "../icons/NavIcons";
+import { invoiceStatus } from "../../utils/MockData";
+import { ChevronDown } from "../../icons/NavIcons";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");

@@ -1,5 +1,5 @@
-import { CoinIcon } from "../icons/NavIcons";
-import { InvoiceDataType } from "../pages/Invoice";
+import { CoinIcon } from "../../icons/NavIcons";
+import { InvoiceDataType } from "../../pages/Invoice";
 import { InvoiceStatus } from "./InvoiceStatus";
 
 export const InvoiceSelector = ({

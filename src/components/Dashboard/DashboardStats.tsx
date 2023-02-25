@@ -1,11 +1,11 @@
-import { ThreeDotsIcon } from "../icons/NavIcons";
-import { MockDashboardStats } from "../utils/MockData";
+import { ThreeDotsIcon } from "../../icons/NavIcons";
+import { MockDashboardStats } from "../../utils/MockData";
 import {
+  Badge,
   CardContainer,
   CardContentBox,
   CardWrapper,
-} from "../global/DataVizComponents";
-import { Badge } from "../global/MainComponents";
+} from "../global/MainComponents";
 
 export const DashboardStats = () => {
   return (
