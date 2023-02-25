@@ -55,7 +55,7 @@ export const ZipToInput = React.forwardRef<HTMLInputElement>((props, ref) => {
           type="text"
           name="zipTo"
           id="zipTo"
-          className="block w-full rounded-md border-gray-300 pr-12 shadow-sm sm:text-sm"
+          className="w-full rounded-md border-gray-300 pr-12 shadow-sm sm:text-sm focus:border-none focus:outline-0 focus:ring-gray-300 focus:ring-1"
           placeholder="Zipcode"
           pattern="[0-9]{5}"
           required

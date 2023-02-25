@@ -35,6 +35,8 @@ export const Estimator = () => {
     });
   };
 
+  console.log("I rendered");
+
   return (
     <PageWrapper>
       <PageHeader title="Estimator" subtitle="Estimate your shipping costs" />
